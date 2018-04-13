@@ -85,7 +85,7 @@ function total () {
   fs.readFile(random, 'utf8', function (e, data) {
     if (e) { console.log(e) }
 
-    var title = data.split(',')[1]
+    var title = data.split(',')[3]
 
     spotify.search({ type: 'track', query: title }).then(function(err, response) {
       var artist = response.tracks.items[0].artists[0].name;
